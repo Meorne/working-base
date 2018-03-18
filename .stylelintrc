@@ -1,0 +1,33 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-idiomatic-order"
+  ],
+  "plugins": [
+    "stylelint-scss",
+    "stylelint-declaration-strict-value",
+  ],
+  "rules": {
+    "selector-max-id": 0,
+    "no-extra-semicolons": true,
+    "declaration-empty-line-before": ["always", {
+      "except": ["first-nested"],
+      "ignore": ["after-declaration"]
+    }],
+    "at-rule-empty-line-before": ["always", {
+      "ignore": ["blockless-after-same-name-blockless", "inside-block"],
+      "ignoreAtRules": ["if", "else", "extend", "return"]
+    }],
+    "block-closing-brace-newline-after": ["always", {
+      "ignoreAtRules": ["if", "else"]
+    }],
+    "selector-list-comma-newline-after": "always-multi-line",
+    "number-leading-zero": "never",
+    "color-named": "never",
+    "scale-unlimited/declaration-strict-value": ["/color/", {
+      ignoreKeywords: ["transparent", "inherit"],
+    }],
+    "string-quotes": "single",
+    "max-nesting-depth": 4
+  }
+}
